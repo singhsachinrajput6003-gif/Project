@@ -5,122 +5,295 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head> 
-<audio autoplay loop>
-  <source src="Elliot_James_Reay_-_I_Think_They_Call_This_Love__Official_Music_Video_(256k).mp3.mpeg" type="audio/mpeg">
+    <style>
+        /* Intro Banner Styles */
+        .intro-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+            transition: opacity 0.7s ease-out, visibility 0.7s ease-out;
+        }
+        
+        .intro-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .intro-content {
+            text-align: center;
+            padding: 2rem;
+            animation: bounceIn 0.8s ease-out;
+        }
+        
+        .intro-content img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        .intro-content h1 {
+            font-size: 2.5rem;
+            color: #be123c;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .intro-content p {
+            font-size: 1.2rem;
+            color: #9f1239;
+            margin-bottom: 2rem;
+            font-style: italic;
+            max-width: 500px;
+        }
+        
+        .intro-button {
+            background: linear-gradient(135deg, #ec4899 0%, #be123c 100%);
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .intro-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .intro-button:active {
+            transform: scale(0.95);
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            transition: opacity 0.7s ease-out;
+            opacity: 1;
+        }
+        
+        .main-content.hidden {
+            display: none;
+        }
+        
+        @keyframes bounceIn {
+            from {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            10%, 30% { transform: scale(1.1); }
+            20%, 40%, 60%, 80% { transform: scale(0.95); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+
+<audio id="bgAudio" autoplay loop>
+  <source src="audio.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
-<div> 
-    <body> 
-                <img src="ChatGPT.png" flex-mx-auto width="100%" >
-    </body>
 
-
+<!-- Intro Banner -->
+<div id="introOverlay" class="intro-overlay">
+    <div class="intro-content">
+        <!-- <img src="ChatGPT.png" alt="Valentine"> -->
+        <h1>Happy Valentine's Day! 💕</h1>
+        <p>Click here to see something special for you...</p>
+        <button class="intro-button">Open Your Gift</button>
+    </div>
 </div>
 
-    <header>
-    </header>
-    <main>
-        <article>
-            <section class="">
-                <div class="container mx-auto">
+<!-- Main Content -->
+<div class="main-content">
+<div>
+    <img src="ChatGPT.png" flex-mx-auto width="100%">
+</div>
+
+
+<main>
+    <article>
+        <section class="">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-2">
+                    <div class="  grid gird-cols-2 space-y-4 my-auto">
+                        <h1 class=" duration-500 mr-5 hover:scale-110 text-5xl font-faimly italic">Dr Nishthaa </h1>
+                        <H1 class="font-faimly italic">Urf Dr Preeti</H1>
+
+                        <h1 class="text-3xl font-faimly italic  ">Cuteeeee💕</h1>
+
+
+                        <p class="font-faimly italic duration-500 mr-5 hover:scale-110  mx-auto">The way you say
+                            "cuteeeee"
+                            really melts my heart. I have a crush on you .
+                            since the first day🤧 —your smile , your voice heals my heart just as gently as you heal
+                            your patients.
+                            The kindness you show to everyone around you makes me fall for you even more every day.
+                            There is something about you that makes even ordinary moments special for me ❤️.</p>
+
+                        <div class="grid grid-cols-2 ">
+                            <div class="h-40">
+                                <video width="300" height="200" loop autoplay muted>
+                                    <source src="nishtha.mp4" type="video/mp4">
+
+                            </div>
+
+                            <div class="h-45 w-65">
+                                <video width="300" height="300" loop autoplay muted>
+                                    <source src="dil.mp4" type="video/mp4">
+
+                            </div>
+                            <div><video width="300" height="200" loop autoplay muted>
+                                    <source src="vai.mp4" type="video/mp4">
+                            </div>
+
+                        </div>
+                        <div>
+                            <p class="font-faimly italic"></p>
+                        </div>
+                        <div class="flex item-center">
+                        </div>
+
+                    </div>
+                    <div class="">
+                        <img src="ChatGPT Image Feb 5, 2026, 05_17_12 PM.png"
+                            class="duration-500 mr-5 hover:scale-110  mx-auto" alt="">
+                        <p class=" duration-500 mr-5 hover:scale-110  mx-auto font-faimly italic px-6 py-5">I know you
+                            don't even know me properly.
+                            But I'm sure if you spend some time with me, you'll fall in love with me too. And i also
+                            know this is all happening very quickly , but I can't lose you.
+                            I can't let someone else come along and take you away from me. But
+                            You can take your time. We can be good friends first, and then you can decide. <button
+                                class=" px-9 py-2 mr-5 hover:scale-110 mx-auto bg-gradient-to-br from-violent-500 to-pink-700 text-white px-4 py-2 rounded-md font-faimly italic">
+                                <a href="vell.html">Click Here</a></button>
+                            <button></button>
+                        </p>
+                        <p class="font-faimly italic">
+
+                        </p>
+
+        </section>
+    </article>
+    <article>
+        <section class="bg-pink-100 py-10 scapce-y-1">
+            <div class="container mx-auto">
+                <div class="relative flex">
+                    <img src="round_image.png" class=" w-1/7 duration-500 mr-5 hover:scale-110 ">
+                    <img src="nwe.jpeg" class=" flex item-left-corner duration-500 mr-5 hover:scale-110  w-1/4 mr-5"
+                        alt="">
+
+                    <h1 class="font-faimly italic bold space-y-4"> </h1>
                     <div class="grid grid-cols-2">
                         <div class="  grid gird-cols-2 space-y-4 my-auto">
-                            <h1 class=" duration-500 mr-5 hover:scale-110 text-5xl font-faimly italic">Dr Nishthaa </h1>
-                               <H1 class="font-faimly italic">Urf Dr Preeti</H1>
 
-                               <h1 class="text-3xl font-faimly italic  ">Cuteeeee💕</h1>
+                            <H1 class="duration-500 mr-5 hover:scale-110 text-3xl font-faimly italic">To Be Honest</H1>
 
 
-                            <p class="font-faimly italic duration-500 mr-5 hover:scale-110  mx-auto">The way you say "cuteeeee"
-                                 really melts my heart. I have a crush on you . 
-                                 since the first day🤧 —your smile , your voice heals my heart just as gently as you heal your patients.
-                                 The kindness you show to everyone around you makes me fall for you even more every day. 
-                                 There is something about you that makes even ordinary moments special for me ❤️.</p>
-                                 
-                       <div class="grid grid-cols-2 ">
-                        <div class="h-40" >
-                            <video width="300" height="200" controls loop autoplay>
-    <source src="nishtha.mp4" type="video/mp4"> 
-     
-                        </div>
-                    
-                                 <div class="h-45 w-65">
-                                     <video width="300" height="300" controls loop autoplay muted>
-    <source src="dil.mp4" type="video/mp4">
-                               
-</div>
- <div><video width="300" height="200" controls loop autoplay muted>
-    <source src="vai.mp4" type="video/mp4"></div>
+                            <p class=" duration-500 mr-5 hover:scale-110  mx-auto font-faimly italic"> I haven't been
+                                able to sleep at all these days.
+                                <br>I don't know what kind of spell you've cast on me.
+                                <br> I won't make any grand promises, But i can say that I will love you more than you
+                                expect. <br> I will always take care of you 👉👈❤️
+                            </p>
 
-                            </div>
+
+
+
+
+
                             <div>
-        <p class="font-faimly italic"></p>
-    </div>
-                            <div  class="flex item-center">
+
+
+
                             </div>
-
                         </div>
-                        <div class="">
-                            <img src="ChatGPT Image Feb 5, 2026, 05_17_12 PM.png" class="duration-500 mr-5 hover:scale-110  mx-auto" alt="">
-                            <p class=" duration-500 mr-5 hover:scale-110  mx-auto font-faimly italic px-6 py-5" >I know you don't even know me properly.
-But I'm sure if you spend some time with me, you'll fall in love with me too. And i also know this is all happening very quickly , but I can't lose you.
-                                 I can't let someone else come along and take you away from me. But
-                                 You can take your time. We can be good friends first, and then you can decide.   <button class=" px-9 py-2 mr-5 hover:scale-110 mx-auto bg-gradient-to-br from-violent-500 to-pink-700 text-white px-4 py-2 rounded-md font-faimly italic">
-                                <a href="harsh/vell.html">Click Here</a></button>
-                                <button></button></p><p class="font-faimly italic">
-                                
-                                 </p>
 
-                                    </section>
-        </article>
-        <article> 
-            <section class="bg-pink-100 py-10 scapce-y-1">
-                <div class="container mx-auto">
-                    <div class="relative flex">
-                         <img src="round_image.png" class=" w-1/7 duration-500 mr-5 hover:scale-110 ">
-                         <img src="nwe.jpeg" class=" flex item-left-corner duration-500 mr-5 hover:scale-110  w-1/4 mr-5" alt="">
-                        
-                         <h1 class="font-faimly italic bold space-y-4"> </h1>
-                         <div class="grid grid-cols-2">
-                        <div class="  grid gird-cols-2 space-y-4 my-auto">
-                           
-                               <H1 class="duration-500 mr-5 hover:scale-110 text-3xl font-faimly italic">To Be Honest</H1>
+                    </div>
 
 
-                            <p class=" duration-500 mr-5 hover:scale-110  mx-auto font-faimly italic"> I haven't been able to sleep at all these days.
-<br>I don't know what kind of spell you've cast on me.
-  <br> I won't make any grand promises, But i can say that I will love you more than you expect. <br> I will always take care of you 👉👈❤️</p>
-   
-  
-  
+        </section>
+    </article>
 
 
-                    
-                            <div> 
-
-
-                                
     </div>
-                    </div>
+    </div>
+    </div>
+    </section>
+    </article>
+</main>
+</div>
 
-                </div>
-                
+<footer>
 
-            </section>
-        </article>
+</footer>
+
+<script>
+    // Get elements
+    const bgAudio = document.getElementById('bgAudio');
+    const introOverlay = document.getElementById('introOverlay');
+    const mainContent = document.querySelector('.main-content');
+    const introButton = document.querySelector('.intro-button');
     
-                        
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </article>
-    </main>
+    // Function to play audio
+    function playAudio() {
+        bgAudio.volume = 0.5; // Set volume to 50%
+        bgAudio.play().catch(error => {
+            console.log('Audio autoplay failed:', error);
+        });
+    }
+    
+    // Play audio on page load
+    window.addEventListener('load', playAudio);
+    
+    // Handle intro click to show main content
+    function showMainContent() {
+        introOverlay.classList.add('hidden');
+        mainContent.classList.remove('hidden');
+        playAudio(); // Ensure audio plays
+    }
+    
+    // Click on button to show content
+    introButton.addEventListener('click', showMainContent);
+    
+    // Also click anywhere on intro to show content
+    introOverlay.addEventListener('click', showMainContent);
+    
+    // Play on first user interaction (click anywhere on page)
+    document.addEventListener('click', function playOnInteraction() {
+        playAudio();
+        document.removeEventListener('click', playOnInteraction);
+    }, { once: true });
+    
+    // Play on scroll interaction as well
+    document.addEventListener('scroll', function playOnScroll() {
+        playAudio();
+        document.removeEventListener('scroll', playOnScroll);
+    }, { once: true });
+</script>
 
-    <footer>
-
-    </footer>
 </body>
 
 </html>
